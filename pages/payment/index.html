@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kết Quả Thanh Toán</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 50px;
+      }
+      .success {
+        color: green;
+        font-size: 24px;
+        font-weight: bold;
+      }
+      .error {
+        color: red;
+        font-size: 24px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Kết Quả Thanh Toán</h1>
+    <p id="payment-result"></p>
+
+    <script>
+      // Hàm lấy giá trị của tham số từ URL
+      function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+      }
+
+      // Kiểm tra vnp_ResponseCode từ URL
+      const responseCode = getQueryParam("vnp_ResponseCode");
+      const resultElement = document.getElementById("payment-result");
+
+      if (responseCode === "00") {
+        resultElement.textContent = "✅ Thanh toán thành công!";
+        resultElement.classList.add("success");
+      } else {
+        resultElement.textContent = "❌ Thanh toán thất bại!";
+        resultElement.classList.add("error");
+      }
+    </script>
+  </body>
+</html>

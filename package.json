@@ -1,0 +1,33 @@
+{
+  "name": "violin",
+  "version": "1.0.0",
+  "description": "violin landing page",
+  "main": "app.js",
+  "engines": {
+    "node": "18.x"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "violin"
+  },
+  "keywords": [
+    "violin"
+  ],
+  "type": "commonjs",
+  "author": "SuperCoderle",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9",
+    "path": "^0.12.7",
+    "cors": "^2.8.5",
+    "dateformat": "^5.0.3",
+    "moment": "^2.30.1",
+    "qs": "^6.14.0"
+  }
+}
